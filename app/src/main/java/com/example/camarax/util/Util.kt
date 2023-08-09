@@ -5,8 +5,6 @@ import android.os.Build
 import android.os.VibrationEffect
 import android.os.Vibrator
 import android.os.VibratorManager
-import android.util.Log
-import androidx.core.content.getSystemService
 import java.util.concurrent.TimeUnit
 
 object Util {

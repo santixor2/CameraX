@@ -187,21 +187,18 @@ class MainActivity : AppCompatActivity() {
                 cameraControl = camera.cameraControl
                 cameraInfo = camera.cameraInfo
                 cameraInfo!!.zoomState.observe(this) {
-                    binding.tvCurrentZoon.text = DecimalFormat("#,#X").format(it.zoomRatio)
+                    binding.tvCurrentZoon.text = DecimalFormat("#.#X").format(it.zoomRatio)
                 }
                 binding.seekbarZoom.setOnSeekBarChangeListener(object : OnSeekBarChangeListener {
                     override fun onProgressChanged(p0: SeekBar?, p1: Int, p2: Boolean) {
-                        cameraControl!!.setLinearZoom(p1 / 100.toFloat())
+                        cameraControl!!.setLinearZoom(p1 / 10.toFloat())
                     }
 
                     override fun onStartTrackingTouch(p0: SeekBar?) {
-                        TODO("Not yet implemented")
                     }
 
                     override fun onStopTrackingTouch(p0: SeekBar?) {
-                        TODO("Not yet implemented")
                     }
-
                 })
 
             } catch (e: Exception) {
@@ -262,9 +259,9 @@ class MainActivity : AppCompatActivity() {
                         binding.btnCameraCapture.apply {
                             isEnabled = true
                             setImageResource(R.drawable.shutter_record)
-                            binding.btnCameraSwitch.ToGone()
-                            binding.btnPhotoView.ToGone()
                         }
+                        binding.btnCameraSwitch.ToGone()
+                        binding.btnPhotoView.ToGone()
                     }
 
                     is VideoRecordEvent.Finalize -> {

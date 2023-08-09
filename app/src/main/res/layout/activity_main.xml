@@ -19,19 +19,20 @@
         android:backgroundTint="@android:color/transparent"
         android:scaleType="fitCenter"
         android:src="@drawable/flash_off"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvCurrentZoon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
         android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_camera_capture" />
 
     <ImageButton
         android:id="@+id/btn_camera_switch"
@@ -62,6 +63,7 @@
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:layout_marginStart="32dp"
+        android:backgroundTint="@android:color/transparent"
         android:scaleType="fitCenter"
         android:src="@drawable/shape_circular"
         app:layout_constraintBottom_toBottomOf="@id/btn_camera_capture"
@@ -84,7 +86,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="50dp"
-        android:max="100"
+        android:max="10"
         android:thumb="@drawable/baseline_trip_origin_24"
         app:layout_constraintTop_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline" />
